@@ -1,0 +1,45 @@
+set number relativenumber " Relative line numbering
+set visualbell
+
+set ignorecase
+set smartcase
+
+let mapleader = " "
+
+map <leader>n :tabprev<Return>
+map <leader>m :tabnext<Return>
+
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+map <leader>es :sp
+map <leader>ev :vsp
+
+map <leader>d <Action>(ReformatCode)
+map <leader>a <Action>(CIDR.Lang.SwitchHeaderSource)
+map <leader>l <Action>(EditorToggleShowWhitespaces)
+
+map <leader>rt <Action>(Refactorings.QuickListPopupAction)
+map <leader>rg <Action>(Generate)
+
+map <leader>gd <Action>(GotoDeclaration)
+map <leader>gs <Action>(GotoSuperMethod)
+map <leader>gt <Action>(GotoTypeDeclaration)
+map <leader>gu <Action>(GotoImplementation)
+
+map <leader>se <Action>(ShowErrorDescription)
+map <leader>sd <Action>(QuickJavaDoc)
+map <leader>sf <Action>(ShowIntentionActions)
+
+map <leader>c <Action>(SearchEverywhere)
+map <leader>t <Action>(GotoFile)
+map <leader>fs <Action>(GotoSymbol)
+map <leader>fc <Action>(GotoClass)
+
+map <leader>vp <Action>(TogglePresentationMode)
+map <leader>vd <Action>(ToggleDistractionFreeMode)
+map <leader>vf <Action>(ToggleFullScreen)
+map <leader>vz <Action>(ToggleZenMode)
+
