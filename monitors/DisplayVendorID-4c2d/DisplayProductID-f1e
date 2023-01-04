@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>DisplayVendorID</key>
+    <integer>19501</integer>
+    <key>DisplayProductID</key>
+    <integer>3870</integer>
+    <key>DisplayProductName</key>
+    <string>Samsung C34J791</string>
+    <key>scale-resolutions</key>
+    <array>
+        <data>AAAZiAAACrAAAAAB</data>
+        <data>AAAYMAAACiAAAAAB</data>
+        <data>AAAW2AAACZAAAAAB</data>
+        <data>AAAVgAAACQAAAAAB</data>
+        <data>AAAUKAAACHAAAAAB</data>
+        <data>AAAS0AAAB+AAAAAB</data>
+        <data>AAAQIAAABsAAAAAB</data>
+        <data>AAANcAAABaAAAAAB</data>
+        <data>AAAMxAAACrAAAAAB</data>
+        <data>AAAMGAAACiAAAAAB</data>
+        <data>AAALbAAACZAAAAAB</data>
+        <data>AAAKwAAACQAAAAAB</data>
+        <data>AAAKFAAACHAAAAAB</data>
+        <data>AAAJaAAAB+AAAAAB</data>
+        <data>AAAIEAAABsAAAAAB</data>
+        <data>AAAGuAAABaAAAAAB</data>
+    </array>
+</dict>
+</plist>
