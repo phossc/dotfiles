@@ -2,3 +2,6 @@ packer_compiled.lua
 
 # MacOS
 .DS_Store
+
+# fish shell
+fish_variables
