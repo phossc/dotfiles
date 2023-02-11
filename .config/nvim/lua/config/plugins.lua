@@ -43,6 +43,11 @@ return require('packer').startup(function(use)
     config = [[require('config.gitsigns')]]
   }
 
+  use {
+    'RRethy/vim-illuminate',
+    config = [[require('config.vim-illuminate')]]
+  }
+
   if packer_bootstrap then
     require('packer').sync()
   end
