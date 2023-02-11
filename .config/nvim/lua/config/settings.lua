@@ -20,3 +20,4 @@ vim.opt.relativenumber = true
 vim.opt.completeopt = {'menu', 'menuone', 'noinsert'}
 vim.opt.signcolumn = 'yes:1'
 
+vim.opt.listchars = { tab = '>-' }
