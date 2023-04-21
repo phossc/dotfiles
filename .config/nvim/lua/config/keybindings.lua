@@ -34,3 +34,8 @@ vim.keymap.set('n', '<Leader>dt', '<Cmd>tabe <Bar> terminal<CR>')
 vim.keymap.set('i', '<Tab>', function()
     return vim.fn.pumvisible == 1 and '<C-y>' or '<Tab>'
 end, {expr = true})
+
+vim.keymap.set({'n', 'v'}, '<Leader>df', function()
+  vim.lsp.buf.format { async = true }
+end)
+
