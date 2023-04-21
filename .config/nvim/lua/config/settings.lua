@@ -17,7 +17,7 @@ vim.opt.splitbelow = true
 vim.opt.numberwidth = 4
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.completeopt = {'menu', 'menuone', 'noinsert'}
-vim.opt.signcolumn = 'yes:1'
+vim.opt.completeopt = { "menu", "menuone", "noinsert" }
+vim.opt.signcolumn = "yes:1"
 
-vim.opt.listchars = { tab = '>-' }
+vim.opt.listchars = { tab = ">-" }

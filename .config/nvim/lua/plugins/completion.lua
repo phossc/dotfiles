@@ -18,8 +18,8 @@ return {
       "saadparwaiz1/cmp_luasnip",
     },
     opts = function()
-      local cmp = require('cmp')
-      local luasnip = require('luasnip')
+      local cmp = require("cmp")
+      local luasnip = require("luasnip")
       return {
         snippet = {
           expand = function(args)
@@ -27,28 +27,28 @@ return {
           end,
         },
         mapping = cmp.mapping.preset.insert({
-          ['<C-e>'] = cmp.mapping.abort(),
-          ['<C-u>'] = cmp.mapping.scroll_docs(-4),
-          ['<C-d>'] = cmp.mapping.scroll_docs(4),
-          ['<C-n>'] = cmp.mapping(function(fallback)
+          ["<C-e>"] = cmp.mapping.abort(),
+          ["<C-u>"] = cmp.mapping.scroll_docs(-4),
+          ["<C-d>"] = cmp.mapping.scroll_docs(4),
+          ["<C-n>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
               cmp.select_next_item({
-                behavior = cmp.SelectBehavior.Insert
+                behavior = cmp.SelectBehavior.Insert,
               })
             else
               cmp.complete()
             end
-          end, { 'i', 's' }),
-          ['<C-p>'] = cmp.mapping(function(fallback)
+          end, { "i", "s" }),
+          ["<C-p>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
               cmp.select_prev_item({
-                behavior = cmp.SelectBehavior.Insert
+                behavior = cmp.SelectBehavior.Insert,
               })
             else
               cmp.complete()
             end
-          end, { 'i', 's' }),
-          ['<Tab>'] = cmp.mapping(function(fallback)
+          end, { "i", "s" }),
+          ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() and cmp.get_selected_entry() then
               cmp.confirm()
             elseif luasnip.expand_or_locally_jumpable() then
@@ -58,30 +58,29 @@ return {
             else
               fallback()
             end
-          end, { 'i', 's' }),
-          ['<S-Tab>'] = cmp.mapping(function(fallback)
+          end, { "i", "s" }),
+          ["<S-Tab>"] = cmp.mapping(function(fallback)
             if luasnip.locally_jumpable(-1) then
               luasnip.jump(-1)
             else
               fallback()
             end
-          end, { 'i', 's' }),
-          ['<S-CR>'] = cmp.mapping.confirm({ 
+          end, { "i", "s" }),
+          ["<S-CR>"] = cmp.mapping.confirm({
             behavior = cmp.ConfirmBehavior.Replace,
             select = true,
           }),
         }),
         sources = cmp.config.sources({
-          { name = 'nvim_lsp' },
-          { name = 'luasnip' },
-          { name = 'buffer' },
-          { name = 'path' },
-        })
+          { name = "nvim_lsp" },
+          { name = "luasnip" },
+          { name = "buffer" },
+          { name = "path" },
+        }),
       }
     end,
     config = function(_, opts)
-      require('cmp').setup(opts)
+      require("cmp").setup(opts)
     end,
   },
 }
-

@@ -1,10 +1,9 @@
 return {
   {
-    'RRethy/vim-illuminate',
+    "RRethy/vim-illuminate",
     opts = {},
     config = function(_, opts)
-      require('illuminate').configure(opts)
-    end
-  }
+      require("illuminate").configure(opts)
+    end,
+  },
 }
-
