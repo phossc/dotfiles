@@ -27,7 +27,7 @@ return {
         on_attach = on_attach,
       },
       servers = {
-        clangd = { cmd = { "clangd", "--clang-tidy" } },
+        clangd = { cmd = { "clangd", "--clang-tidy", "--offset-encoding=utf-16" } },
       },
     },
     config = function(_, opts)
