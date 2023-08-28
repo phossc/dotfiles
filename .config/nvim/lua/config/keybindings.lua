@@ -35,10 +35,6 @@ vim.keymap.set("i", "<Tab>", function()
   return vim.fn.pumvisible == 1 and "<C-y>" or "<Tab>"
 end, { expr = true })
 
-vim.keymap.set({ "n", "v" }, "<Leader>df", function()
-  vim.lsp.buf.format({ async = true })
-end)
-
 vim.keymap.set({ "n", "v" }, "<Leader>sf", vim.lsp.buf.code_action)
 vim.keymap.set("n", "gi", vim.lsp.buf.implementation)
 vim.keymap.set("n", "<Leader>rn", vim.lsp.buf.rename)
