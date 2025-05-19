@@ -1,0 +1,36 @@
+[
+  {
+    "context": "GitPanel || ProjectPanel || CollabPanel || OutlinePanel || ChatPanel || VimControl || EmptyPane || SharedScreen || MarkdownPreview || KeyContextView",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "space d f": "editor::Format"
+    }
+  },
+  {
+    "context": "vim_mode == visual && !menu",
+    "bindings": {
+      "space d f": "editor::FormatSelections"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "space e h": "pane::SplitLeft",
+      "space e l": "pane::SplitRight",
+      "space e k": "pane::SplitUp",
+      "space e j": "pane::SplitDown",
+      "space r n": "editor::Rename",
+      "space s f": "editor::ToggleCodeActions",
+      "space space": "file_finder::Toggle",
+      "space ;": "pane::DeploySearch"
+    }
+  }
+]
