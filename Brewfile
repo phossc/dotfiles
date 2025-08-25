@@ -24,3 +24,4 @@ brew "zig"
 
 cask "font-jetbrains-mono-nerd-font"
 cask "rectangle"
+cask "zed"
