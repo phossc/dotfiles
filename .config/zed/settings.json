@@ -1,18 +1,18 @@
 {
   "agent": {
+    "use_modifier_to_send": true,
     "default_profile": "ask",
     "default_model": {
       "provider": "copilot_chat",
       "model": "o4-mini"
-    },
-    "version": "2"
+    }
   },
   "vim_mode": true,
   "vim": {
     "use_system_clipboard": "never"
   },
 
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "cursor_blink": false,
   "soft_wrap": "editor_width",
 
