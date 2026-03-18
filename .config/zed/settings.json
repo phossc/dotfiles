@@ -1,4 +1,9 @@
 {
+  "agent_servers": {
+    "opencode": {
+      "type": "registry"
+    }
+  },
   "agent": {
     "enable_feedback": false,
     "profiles": {},
