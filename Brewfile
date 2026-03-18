@@ -1,4 +1,5 @@
 tap "homebrew/bundle"
+tap "anomalyco/tap"
 
 brew "bat"
 brew "clang-format"
@@ -23,6 +24,8 @@ brew "stow"
 brew "stylua"
 brew "tmux"
 brew "zig"
+
+brew "anomalyco/tap/opencode"
 
 cask "font-jetbrains-mono-nerd-font"
 cask "zed"
