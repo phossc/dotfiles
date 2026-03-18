@@ -1,15 +1,19 @@
 {
   "agent": {
+    "enable_feedback": false,
+    "profiles": {},
     "use_modifier_to_send": true,
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_model": {
+      "effort": "high",
+      "enable_thinking": true,
       "provider": "copilot_chat",
-      "model": "o4-mini"
-    }
+      "model": "claude-opus-4.6",
+    },
   },
   "vim_mode": true,
   "vim": {
-    "use_system_clipboard": "never"
+    "use_system_clipboard": "never",
   },
 
   "relative_line_numbers": "enabled",
@@ -19,27 +23,27 @@
   "wrap_guides": [80, 120],
   "max_tabs": 1,
   "tab_bar": {
-    "show": false
+    "show": false,
   },
   "scrollbar": {
-    "show": "never"
+    "show": "never",
   },
 
   "theme": {
     "mode": "system",
     "light": "One Dark",
-    "dark": "One Dark"
+    "dark": "One Dark",
   },
 
   "ui_font_size": 16,
   "buffer_font_size": 13,
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_line_height": {
-    "custom": 1.8
+    "custom": 1.8,
   },
 
   "telemetry": {
     "metrics": false,
-    "diagnostics": false
-  }
+    "diagnostics": false,
+  },
 }
