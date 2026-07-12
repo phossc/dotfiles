@@ -1,5 +1,3 @@
-tap "homebrew/bundle"
-
 brew "bat"
 brew "clang-format"
 brew "cmake"
