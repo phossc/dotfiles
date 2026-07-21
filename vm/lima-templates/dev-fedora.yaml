@@ -1,0 +1,72 @@
+minimumLimaVersion: 2.0.0
+
+base:
+- template:_images/fedora-44
+
+# mounts:
+# - location: "~/dev-vm-shared"
+#   mountPoint: "{{.Home}}/shared"
+#   writable: false
+#
+# portForwards:
+# - guestPortRange: [8000, 9000]
+#   hostPortRange: [18000, 19000]
+#
+
+provision:
+- mode: system
+  script: |
+    #!/bin/sh
+
+    set -eux
+
+    dnf -y group install development-tools
+    dnf -y install tmux
+    dnf -y install fish
+    dnf -y install neovim
+    dnf -y install fzf
+    dnf -y install bat
+    dnf -y install fd-find
+    dnf -y install hyperfine
+    dnf -y install jq
+    dnf -y install yq
+    dnf -y install tokei
+    dnf -y install ShellCheck
+    dnf -y install opam
+- mode: user
+  script: |
+    #!/bin/sh
+
+    set -eux
+
+    brew_prefix="/home/linuxbrew/.linuxbrew"
+
+    if ! command -v "${brew_prefix}/bin/brew" >/dev/null 2>&1; then
+      NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    else
+      echo "Homebrew is already installed, skipping"
+    fi
+
+    "${brew_prefix}/bin/brew" bundle install --no-upgrade --file=- <<eof
+    brew "mise"
+    brew "ripgrep"
+    brew "shfmt"
+    brew "starship"
+    eof
+- mode: user
+  script: |
+    #!/bin/sh
+
+    echo "-------------------------------------------------------------------"
+    echo "Run 'sudo dnf -y upgrade --refresh' to update your system."
+    echo "Run 'dnf needs-restarting -r' to see if a reboot is required."
+    echo "Run 'brew upgrade' to update homebrew packages."
+    echo "-------------------------------------------------------------------"
+    echo "Set up basic git configuration:"
+    echo "Name:  'git config --global user.name \"your name\"'"
+    echo "Email: 'git config --global user.email \"your email\"'"
+    echo "-------------------------------------------------------------------"
+
+cpus: 2
+memory: 2GiB
+disk: 20GiB
