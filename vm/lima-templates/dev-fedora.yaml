@@ -70,22 +70,27 @@ provision:
     git clone https://github.com/phossc/dotfiles.git "${dotfiles_path}"
 
     if ! [ -e "${HOME}/.config/fish/config.fish" ]; then
+      mkdir -p "${HOME}/.config/fish"
       ln -s "${dotfiles_path}/vm/config-deviations/fish/config.fish" "${HOME}/.config/fish/config.fish"
     fi
 
     if ! [ -e "${HOME}/.config/fish/conf.d/tokyonight-moon.fish" ]; then
+      mkdir -p "${HOME}/.config/fish/conf.d"
       ln -s "${dotfiles_path}/vm/config-deviations/fish/conf.d/tokyonight-moon.fish" "${HOME}/.config/fish/conf.d/tokyonight-moon.fish"
     fi
 
     if ! [ -e "${HOME}/.config/tmux/tmux.conf" ]; then
+      mkdir -p "${HOME}/.config/tmux"
       ln -s "${dotfiles_path}/vm/config-deviations/tmux/tmux.conf" "${HOME}/.config/tmux/tmux.conf"
     fi
 
     if ! [ -e "${HOME}/.config/starship.toml" ]; then
+      mkdir -p "${HOME}/.config"
       ln -s "${dotfiles_path}/.config/starship.toml" "${HOME}/.config/starship.toml"
     fi
 
     if ! [ -d "${HOME}/.config/nvim" ]; then
+      mkdir -p "${HOME}/.config"
       ln -s "${dotfiles_path}/.config/nvim" "${HOME}/.config/nvim"
     fi
 
